@@ -22,20 +22,20 @@ class Vlucht
     public function addVlucht($post)
     {
         try {
-            $sql = "CALL createBooking(':adres', 
-                                        ':woonplaats', 
-                                        ':postcode', 
-                                        ':email',
+            $sql = "CALL createBooking(:adres, 
+                                        :woonplaats, 
+                                        :postcode, 
+                                        :email,
                                          :mobiel, 
-                                        ':voornaam', 
-                                        ':achternaam', 
-                                        ':geboortedatum', 
-                                         :vluchtnummer, 
-                                        ':oorsprong', 
-                                        ':gate',
-                                        ':bestemming', 
-                                        ':vertrekdatum', 
-                                        ':vertrektijd' );
+                                        :voornaam, 
+                                        :achternaam, 
+                                        :geboortedatum, 
+                                        :vluchtnummer, 
+                                        :oorsprong, 
+                                        :gate,
+                                        :bestemming, 
+                                        :vertrekdatum, 
+                                        :vertrektijd);
             ";
             $this->db->query($sql);
             $this->db->bind(':adres', $post['adres'], PDO::PARAM_STR);
