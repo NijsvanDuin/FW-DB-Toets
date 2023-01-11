@@ -9,9 +9,7 @@ class Vlucht
     }
     public function getVlucht()
     {
-        $this->db->query("SELECT *
-                          FROM Instapkaart 
-                          WHERE `id` = 1");;
+        $this->db->query("CALL readBooking();");
         $result = $this->db->resultSet();
         return $result;
     }

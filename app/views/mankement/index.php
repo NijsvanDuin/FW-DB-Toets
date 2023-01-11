@@ -1,6 +1,5 @@
 <?php require(APPROOT . '/views/includes/header.php') ?>
 <h2> <?= $data['title'] ?></h3> <br>
-
     <h4> <?= $data['first']; ?></h4> <br>
     <table border="1">
         <thead>

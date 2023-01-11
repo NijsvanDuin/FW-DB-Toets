@@ -23,7 +23,16 @@ class Vluchten extends Controller
         $rows = '';
         foreach ($result as $info) {
             $rows .= "
-            $info->id";
+            <tr>
+            <td>$info->Voornaam $info->Achternaam</td>
+            <td>$info->Adres</td>
+            <td>$info->Email</td>
+            <td>$info->Bestemming</td>
+            <td>$info->Vertrekdatum</td>
+            <td>$info->Vertrektijd</td>
+            <td><a href='" . URLROOT . "/vluchten/updateVlucht/{$info->insId}'><img src='" . URLROOT . "/img/b_help.png' alt='topic'></a></td>
+            <td><a href='" . URLROOT . "/vluchten/deleteVlucht/{$info->insId}'><img src='" . URLROOT . "/img/b_report.png' alt='topic'></a></td>
+            </tr>";
         }
 
         $data = [
