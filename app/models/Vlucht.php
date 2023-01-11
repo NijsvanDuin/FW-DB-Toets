@@ -57,6 +57,7 @@ class Vlucht
         } catch (PDOException $ex) {
             error_log("ERROR : Failed to get all Vluchts from database in class VluchtModel method getVluchtUseSp!", 0);
             die('ERROR : Failed to get all Vluchts from database in class VluchtsModel method getVluchtsUseSp!  ' . $ex->getMessage());
+            header('Refresh:5; url=' . URLROOT . '/vlucht/index/');
         }
     }
 }

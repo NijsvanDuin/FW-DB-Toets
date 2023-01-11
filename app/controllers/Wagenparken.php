@@ -14,12 +14,6 @@ class Wagenparken extends Controller
     public function index()
     {
         $result = $this->wagenparkModel->getKmstand();
-        // if ($result) {
-        //     $instrecteurNaam = $result[0]->INNA;
-        // } else {
-        //     $instrecteurNaam = '';
-        // }
-        // var_dump($result);
         $rows = '';
         foreach ($result as $info) {
             $rows .= "

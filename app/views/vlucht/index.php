@@ -6,7 +6,7 @@
     <input type="text" name="vlucht" id="vlucht">
     <input type="submit" value="Zoeken">
 </form>
-<button><a href='" . URLROOT . "/addVlucht'>New Booking</a></button>
+<button><a href='<?php URLROOT  ?>/addVlucht'>New Booking</a></button>
 <table border="1">
     <thead>
         <th>Naam</th>

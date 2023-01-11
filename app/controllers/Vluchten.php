@@ -48,5 +48,19 @@ class Vluchten extends Controller
     }
     public function addVlucht()
     {
+        try {
+            $result = $this->vluchtModel->addVlucht($_POST);
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                // var_dump($_POST);
+                $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+                $result = $this->vluchtModel->addVlucht($_POST);
+                echo "<p>De nieuwe kilometerstand is toegevoegd</p>";
+                header('Refresh:5; url=' . URLROOT . '/vlucht/index/');
+            }
+            $this->view('vlucht/addVlucht');
+        } catch (PDOException $ex) {
+            error_log("<p>De nieuwe  is niet toegevoegd, probeer het opnieuw</p>", 0);
+            die('ERROR : Failed to get all Vluchts from database in class VluchtsModel method getVluchtsUseSp!  ' . $ex->getMessage());
+        }
     }
 }
