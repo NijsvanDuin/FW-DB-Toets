@@ -3,4 +3,5 @@
 <a href="<?= URLROOT; ?>/RichestPeoples/index">Rijkste mensen</a><br>
 <a href="<?= URLROOT; ?>/Lessen/index">Overzicht rijlessen</a><br>
 <a href="<?= URLROOT; ?>/wagenparken/index"> Overzicht Wagenpark</a> <br>
-<a href="<?= URLROOT; ?>/mankementen/index"> Overzicht Mankementen</a>
+<a href="<?= URLROOT; ?>/mankementen/index"> Overzicht Mankementen</a> <br>
+<a href="<?= URLROOT; ?>/vluchten/index"> Overzicht Vluchten</a>
