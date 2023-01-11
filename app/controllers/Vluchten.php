@@ -21,6 +21,8 @@ class Vluchten extends Controller
         // }
         // var_dump($result);
         $rows = '';
+        $idsToCreate = '';
+
         foreach ($result as $info) {
             $rows .= "
             <tr>
@@ -33,6 +35,9 @@ class Vluchten extends Controller
             <td><a href='" . URLROOT . "/vluchten/updateVlucht/{$info->insId}'><img src='" . URLROOT . "/img/b_help.png' alt='topic'></a></td>
             <td><a href='" . URLROOT . "/vluchten/deleteVlucht/{$info->insId}'><img src='" . URLROOT . "/img/b_report.png' alt='topic'></a></td>
             </tr>";
+            $idsToCreate .= "
+            $info->pasId, $info->conId, $info->vluId, $info->insId,
+            ";
         }
 
         $data = [
@@ -40,5 +45,8 @@ class Vluchten extends Controller
             'rows' => $rows
         ];
         $this->view('vlucht/index', $data);
+    }
+    public function addVlucht()
+    {
     }
 }

@@ -6,18 +6,4 @@
     <input type="text" name="vlucht" id="vlucht">
     <input type="submit" value="Zoeken">
 </form>
-<button><a href='" . URLROOT . "/addVlucht'>New Booking</a></button>
-<table border="1">
-    <thead>
-        <th>Naam</th>
-        <th>Adres</th>
-        <th>Email</th>
-        <th>Bestemming</th>
-        <th>Vertrekdatum</th>
-        <th>Vertrektijd</th>
-    </thead>
-    <tbody>
-        <?php echo $data['rows'] ?>
-    </tbody>
-</table>
 <?php require(APPROOT . '/views/includes/footer.php') ?>
